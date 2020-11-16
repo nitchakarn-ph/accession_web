@@ -12,5 +12,5 @@
 การเรียกใช้งานตัวอย่างไฟล์เว็บ (data folder)
 1. ติดตั้ง xampp
     สามารถดูดาวห์โหลดได้ที่ https://www.apachefriends.org/download.html
-2. clone หรือ ดาว์โหลด folder data 
+2. clone หรือ ดาว์โหลด folder webTest 
 
