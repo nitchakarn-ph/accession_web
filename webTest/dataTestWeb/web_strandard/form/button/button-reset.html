@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type button Button</title>
+</head>
+<body>
+    <p>Press Enter the "Try it" button to create a BUTTON element with a "Click me" text.</p>
+
+    <button onkeypress="myFunction()" type="reset" id="myBtn">Try it</button>
+
+    <p id="demo"></p>
+    
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myBtn").value;
+          document.getElementById("demo").innerHTML = x;
+        }
+        
+    </script>
+</body>
+</html>

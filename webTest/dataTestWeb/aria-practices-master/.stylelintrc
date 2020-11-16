@@ -1,0 +1,14 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "media-feature-name-no-unknown": [
+      true,
+      {
+        "ignoreMediaFeatureNames": [
+          "forced-colors"
+        ]
+      }
+    ],
+    "no-descending-specificity": null
+  }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Tabindex</title>
+</head>
+<body>
+    <div class="container" style="margin-top: 30px;">
+        <h4>tabindex="-1" within ::shadow[tabindex="-1"]</h4>
+        <hr>
+        <p><b>Note:</b> Try focused the elements by using the "Tab" button on your keyboard.</p>
+        <div tabindex="-1">W3Schools (tabindex="-1") <br><br>
+            <input tabindex="-1"> Text (tabindex="-1")
+        </div><br>
+        <script>
+        // At start, set focus on the first div
+        document.getElementsByTagName('input')[0].focus();
+        </script>
+        
+        
+    </div>
+</body>
+</html>

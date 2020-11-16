@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Iframe</title>
+</head>
+
+<body>
+    <div class="container" style="margin-top: 30px;">
+        <h1>The iframe sandbox attribute</h1>
+
+        <iframe src="http://localhost/dataTest/web_strandard/input/button.html" sandbox>
+          <p>Your browser does not support iframes.</p>
+        </iframe>
+        
+        <p>The "Get date and time" button will run a script in the inline frame.</p>
+        <p>Since the sandbox attribute is set, the content of the inline frame is not allowed to run scripts.</p>
+        <p>You can add "allow-scripts" to the sandbox attribute, to allow the JavaScript to run.</p>
+        
+    </div>
+
+</body>
+
+</html>

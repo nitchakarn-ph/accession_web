@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The dirname attribute</title>
+</head>
+
+<body>
+    <form action="/addcomment" method="post">
+        <div>
+            <label for="add-comment">Comment:</label>
+            <input type="text" id="add-comment" name="comment" dirname="comment.dir" required>
+        </div>
+        <div>
+            <button name="mode" type="submit" value="add">Post Comment</button>
+        </div>
+    </form>
+</body>
+
+</html>

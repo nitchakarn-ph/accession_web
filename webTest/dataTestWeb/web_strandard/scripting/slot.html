@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The slot element</title>
+</head>
+
+<body>
+    <template id="profile-card">
+        <div class="card">
+          <slot name="user-name">
+            <p>No user name available.</p>
+          </slot>
+          <slot name="user-email">
+            <p>No email provided.</p>
+          </slot>
+          <!-- an anonymous slot -->
+          <slot>
+            <p>No details provided.</p>
+          </slot>
+        </div>
+      </template>
+</body>
+
+</html>

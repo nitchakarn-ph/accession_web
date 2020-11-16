@@ -1,0 +1,17 @@
+language: node_js
+
+node_js:
+  - "lts/*"
+
+git:
+  depth: 3
+
+stages:
+- Lint
+
+jobs:
+
+  include:
+    - stage: Lint
+      name: HTML Linting
+      script: npm run vnu-jar

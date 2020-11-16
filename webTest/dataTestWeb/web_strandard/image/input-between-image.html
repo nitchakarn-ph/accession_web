@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Image Text</title>
+</head>
+
+<body>
+    <div class="container" style="margin-top: 30px;">
+        <h1>Display the Tag input between Tag image and image.</h1>
+        <hr>
+        <p>Click on the computer, the phone, or the cup of coffee to go to a new page and read more about the topic:</p>
+
+        <img src="../../images/workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+        <map name="workmap">
+            <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+            <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+            <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
+        </map>
+        <input type="text" id="input" name="input">
+        <img src="../../images/shapes.png" usemap="#shapes"
+            alt="Four shapes are available: a red hollow box, a green circle, a blue triangle, and a yellow four-pointed star.">
+        <map name="shapes">
+            <area shape=rect coords="50,50,100,100"> <!-- the hole in the red box -->
+            <area shape=rect coords="25,25,125,125" href="red.html" alt="Red box.">
+            <area shape=circle coords="200,75,50" href="green.html" alt="Green circle.">
+            <area shape=poly coords="325,25,262,125,388,125" href="blue.html" alt="Blue triangle.">
+            <area shape=poly coords="450,25,435,60,400,75,435,90,450,125,465,90,500,75,465,60" href="yellow.html"
+                alt="Yellow star.">
+        </map>
+
+    </div>
+
+</body>
+
+</html>

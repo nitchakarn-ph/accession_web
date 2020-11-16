@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The fieldset element</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Display</legend>
+        <div>
+            <label>
+                <input type="radio" name="c" value="0" checked> Black on White
+            </label>
+        </div>
+        <div>
+            <label>
+                <input type="radio" name="c" value="1"> White on Black
+            </label>
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" name="g"> Grayscale
+            </label>
+        </div>
+        <div>
+            <label>
+                Enhance contrast
+                <input type="range" name="e" list="contrast" min="0" max="100" value="0" step="1">
+            </label>
+        </div>
+        <datalist id="contrast">
+            <option label="Normal" value="0">
+            <option label="Maximum" value="100">
+        </datalist>
+    </fieldset>
+</body>
+
+</html>

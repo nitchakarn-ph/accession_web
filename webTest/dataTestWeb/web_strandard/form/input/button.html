@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+</head>
+<body>
+    <h3>A demonstration of how to access an Input Button</h3>
+
+    <p>Click the button to get the text that is displayed on the button.</p>
+    
+    <input type="button" id="myBtn" onkeypress="myFunction()" value="Try it">
+    
+    <p id="demo"></p>
+    
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myBtn").value;
+          document.getElementById("demo").innerHTML = x;
+        }
+        
+    </script>
+
+</body>
+</html>

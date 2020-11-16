@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Button Examples | WAI-ARIA Authoring Practices 1.2</title>
+
+  <!-- Core JS and CSS shared by all examples. Do not modify when using this template. -->
+  <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/base.css">
+  <link rel="stylesheet" href="../css/core.css">
+  <script src="../js/examples.js"></script>
+  <script src="../js/highlight.pack.js"></script>
+  <script src="../js/app.js"></script>
+
+  <!-- CSS and JS for this example. -->
+  <link rel="stylesheet" href="css/button.css">
+  <script src="js/button.js"></script>
+</head>
+<body>
+  
+  <main>
+    <section>
+      <h2 id="ex_label">Example</h2>
+
+      <div role="separator" id="ex_start_sep" aria-labelledby="ex_start_sep ex_label" aria-label="Start of"></div>
+
+      <div id="example">
+        <p>This <q>Print</q> action button uses a <code>div</code> element.</p>
+        <div tabindex="0" role="button" id="action">Print Page</div>
+
+        <p>This <q>Mute</q> toggle button uses an <code>a</code> element.</p>
+        <a tabindex="0" role="button" id="toggle" aria-pressed="false">
+          Mute
+          <svg aria-hidden="true" focusable="false">
+            <use xlink:href="images/mute.svg#icon-sound"></use>
+          </svg>
+        </a>
+      </div>
+
+      <div role="separator" id="ex_end_sep" aria-labelledby="ex_end_sep ex_label" aria-label="End of"></div>
+    </section>
+
+    
+  </main>
+
+ 
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The input element container autocomplete attribute</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Ship the blue gift to...</legend>
+        <div>
+            <label>
+                Address:
+                <input name="ba" autocomplete="section-blue shipping street-address">
+            </label>
+        </div>
+        <br>
+        <div>
+            <label>
+                City:
+                <input name="bc" autocomplete="section-blue shipping address-level2">
+            </label>
+        </div>
+        <br>
+        <div>
+            <label>
+                Postal Code:
+                <input name="bp" autocomplete="section-blue shipping postal-code">
+            </label>
+        </div>
+    </fieldset>
+    <br><br><br>
+    <fieldset>
+        <legend>Ship the red gift to...</legend>
+        <div>
+            <label>
+                Address:
+                <input name="ra" autocomplete="section-red shipping street-address">
+            </label>
+        </div>
+        <br>
+        <div>
+            <label>
+                City:
+                <input name="rc" autocomplete="section-red shipping address-level2">
+            </label>
+        </div>
+        <br>
+        <div>
+            <label>
+                Postal Code:
+                <input name="rp" autocomplete="section-red shipping postal-code">
+            </label>
+        </div>
+    </fieldset>
+</body>
+
+</html>

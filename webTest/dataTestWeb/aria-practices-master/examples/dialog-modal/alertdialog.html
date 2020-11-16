@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Alert Dialog Example | WAI-ARIA Authoring Practices 1.2</title>
+    <!--  Core js and css shared by all examples; do not modify when using this template. -->
+    <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/base.css">
+    <link rel="stylesheet" href="../css/core.css">
+    <script src="../js/examples.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script src="../js/app.js"></script>
+    <!-- js from the dialog-modal example -->
+    <script src="../js/utils.js"></script>
+    <script src="js/dialog.js"></script>
+    <!--  js and css for this example. -->
+    <link href="css/dialog.css" rel="stylesheet">
+    <script src="js/alertdialog.js"></script>
+  </head>
+
+  <body>
+    
+    <main>
+     
+      <section>
+        <h2 id="ex_label">Example</h2>
+        <div role="separator" id="ex_start_sep" aria-labelledby="ex_start_sep ex_label" aria-label="Start of"></div>
+        <div id="ex_alertdialog">
+          <label for="notes">Notes</label>
+          <textarea class="notes" name="notes" id="notes" rows="7">This is an example text box, which unsurprisingly contains text. The user is given the option to save this text - which triggers a basic alert - or to discard the text - which triggers an alert dialog that prompts the user for confirmation.</textarea>
+          <button type="button" aria-controls="notes" id="notes_save">Save</button>
+          <button type="button" aria-controls="notes" id="notes_discard" onclick="openAlertDialog('alert_dialog', this)">Discard</button>
+          <div role="alert" id="alert_toast" class="toast hidden">Nothing to discard.</div>
+          <div class="dialog-backdrop no-scroll">
+            <div id="alert_dialog" role="alertdialog" aria-modal="true" aria-labelledby="dialog_label" aria-describedby="dialog_desc" class="hidden">
+              <h2 id="dialog_label" class="dialog_label">Confirmation</h2>
+              <div id="dialog_desc" class="dialog_desc">
+                <p>Are you sure you want to discard all of your notes?</p>
+              </div>
+              <div class="dialog_form_actions">
+                <button type="button" onclick="closeDialog(this)">No</button>
+                <button type="button" aria-controls="notes" id="notes_confirm" onclick="discardInput(this)">Yes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div role="separator" id="ex_end_sep" aria-labelledby="ex_end_sep ex_label" aria-label="End of"></div>
+      </section>
+     
+    </main>
+   
+  </body>
+</html>

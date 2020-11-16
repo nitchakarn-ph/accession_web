@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation E-mail</title>
+</head>
+
+<body>
+    <p><input type="button" value="Compose" onclick="compose()"></p>
+    <nav>
+        <h2>Folders</h2>
+        <ul>
+            <li><a href="/inbox" onclick="return openFolder(this.href)">Inbox</a> <span class="count"></span></li>
+            <li><a href="/sent" onclick="return openFolder(this.href)">Sent</a></li>
+            <li><a href="/drafts" onclick="return openFolder(this.href)">Drafts</a></li>
+            <li><a href="/trash" onclick="return openFolder(this.href)">Trash</a></li>
+            <li><a href="/customers" onclick="return openFolder(this.href)">Customers</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>

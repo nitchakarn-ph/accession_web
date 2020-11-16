@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The progress element</title>
+</head>
+
+<body>
+    <p>
+        Progress:
+        <progress id="pbar" max="100" value="0">
+            <span id="pVal">0</span>%
+        </progress>
+    </p>
+
+    <script>
+        var progressBar = document.getElementById('pbar');
+
+        function updateProgress(newValue) {
+            progressBar.value = newValue;
+            progressBar.querySelector('#pVal')[0].textContent = newValue;
+        }
+    </script>
+</body>
+
+</html>

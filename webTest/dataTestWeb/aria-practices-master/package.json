@@ -1,0 +1,69 @@
+{
+  "name": "aria-practices",
+  "version": "0.0.0",
+  "description": "This repository maintains the WAI-ARIA Authoring Practices Guide. This is developed by the [ARIA Working Group](http://www.w3.org/WAI/ARIA/). The staff contact is [Michael Cooper](http://www.w3.org/People/cooper/). Please do not provide commit access to this repository without coordination.",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "fix": "npm run lint:es -- --fix && npm run lint:css -- --fix",
+    "lint": "npm run lint:es && npm run lint:css && npm run vnu-jar && npm run lint:spelling",
+    "lint:css": "stylelint **/*.css",
+    "lint:es": "eslint .",
+    "lint:js": "npm run lint:es",
+    "lint:html": "npm run vnu-jar",
+    "lint:spelling": "cspell \"examples/**/*.html\" \"aria-practices.html\"",
+    "regression": "ava --timeout=1m",
+    "regression-report": "node test/util/report",
+    "test": "npm run lint && npm run regression",
+    "vnu-jar": "java -jar node_modules/vnu-jar/build/dist/vnu.jar --errors-only --filterfile .vnurc --no-langdetect --skip-non-html *.html examples/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/w3c/aria-practices.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/w3c/aria-practices/issues"
+  },
+  "homepage": "https://github.com/w3c/aria-practices#readme",
+  "devDependencies": {
+    "ava": "^3.7.1",
+    "cheerio": "^1.0.0-rc.2",
+    "cspell": "^4.1.0",
+    "eslint": "^7.10.0",
+    "geckodriver": "^1.19.1",
+    "glob": "^7.1.6",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "npm-merge-driver": "^2.3.6",
+    "run-node": "^2.0.0",
+    "selenium-webdriver": "^4.0.0-alpha.7",
+    "stylelint": "^13.7.2",
+    "stylelint-config-standard": "^20.0.0",
+    "vnu-jar": "^20.3.16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.css": [
+      "stylelint --fix",
+      "git add"
+    ],
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "ava": {
+    "files": [
+      "test/tests/*"
+    ]
+  },
+  "dependencies": {}
+}
